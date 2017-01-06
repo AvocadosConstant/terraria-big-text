@@ -1,3 +1,5 @@
+import sys
+
 def charToBig(c):
   val = ord(c)
   if val >= ord('0') and val <= ord('9'):
@@ -12,10 +14,4 @@ def strToBig(raw):
     output += charToBig(c)
   return output
 
-loop = True
-while loop:
-  print("\nEnter your string to be converted:")
-  raw = input()
-
-  print("Your converted text is:")
-  print(strToBig(raw))
+print(strToBig(sys.argv[1]))
