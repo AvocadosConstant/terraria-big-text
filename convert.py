@@ -26,7 +26,7 @@ def charToBig(c):
 
 def strToBig(raw):
   """Convert a string to the codes for equivalent big letter statues."""
-  return ''.join(charToBig(c) for c in raw.upper())
+  return ''.join(map(charToBig, raw.upper()))
 
 # Main
 if len(sys.argv) > 1:
