@@ -1,11 +1,14 @@
 import sys
 
+CONST_BIG_0 = 2702
+CONST_BIG_A = 2712
+
 def charToBig(c):
   val = ord(c)
-  if val >= ord('0') and val <= ord('9'):
-    return "[i:" + str(val - ord('0') + 2702) + "]"
-  if val >= ord('A') and val <= ord('Z'):
-    return "[i:" + str(val - ord('A') + 2712) + "]"
+  if c.isdigit():
+    return "[i:" + str(val - ord('0') + CONST_BIG_0) + "]"
+  if c.isalpha():
+    return "[i:" + str(val - ord('A') + CONST_BIG_A) + "]"
   return c
 
 def strToBig(raw):
